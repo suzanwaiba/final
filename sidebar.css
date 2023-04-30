@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body{
+    margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+#sidebar{
+	position: fixed;
+	left: -250px;
+	width: 280px;
+	height: 100%;
+	transition: all .5s ease;
+	font-weight: 40;
+	z-index: 1;
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 90);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0em 0.5em;
+}
+#sidebar header{
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	line-height: 70px;
+	border-bottom: 1px solid black;
+	user-select: none;
+
+}
+#sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 17px;
+	color: black;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: .4s;
+
+}
+#sidebar ul li:hover a{
+	padding-left: 50px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border:none;
+	border-radius: 30px 0px 30px 0px;
+
+}
+#sidebar ul a i{
+margin-right: 16px;
+}
+#check{
+	display: none;
+}
+label #btn, label #cancel{
+	position: absolute;
+	cursor: pointer;
+
+	
+}
+label #btn{
+	left: 40px;
+	top: 25px;
+	font-size: 35px;
+	color: black;
+	padding: 6px 12px;
+	transition: all .5s;
+	z-index: 1;
+}
+label #cancel{
+	z-index: 1111;
+	left: -195px;
+	top: 22px;
+	font-size: 20px;
+	color: black;
+	padding: 4px 9px;
+	transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+	left : 0;
+}
+#check:checked ~ label #btn{
+	left : 280px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~ label #cancel{
+	left : 195px;	
+}
+
+#check:checked ~ section{
+	margin-left: 280px;
+}
+
+section{
+	/* background:url(background3.JPG) no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh; */
+	transition: all .5s;
+	padding:15px 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
